@@ -44,7 +44,7 @@ async function validatePasswordOrFail(password: string, userPassword: string) {
 }
 
 export type SignInParams = Pick<User, "email" | "password">;
-
+export type UserData = {userId: number }
 type SignInResult = {
   user: Pick<User, "id" | "email">;
   token: string;

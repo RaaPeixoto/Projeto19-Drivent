@@ -6,3 +6,4 @@ export function invalidCredentialsError(): ApplicationError {
     message: "email or password are incorrect",
   };
 }
+
