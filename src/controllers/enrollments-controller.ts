@@ -20,7 +20,7 @@ export async function postCreateOrUpdateEnrollment(req: AuthenticatedRequest, re
   try {
     await enrollmentsService.createOrUpdateEnrollmentWithAddress({
       ...req.body,
-      userId: req.userId,
+      userId: res.locals.userId,
     });
 
     return res.sendStatus(httpStatus.OK);

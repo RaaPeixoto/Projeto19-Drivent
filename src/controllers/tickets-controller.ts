@@ -1,7 +1,6 @@
 
 import { Ticket } from "@/schemas";
 import { getTicketsService, getTicketsTypeService, postTicketService } from "@/services/tickets-services";
-
 import { Request, Response } from "express";
 import httpStatus from "http-status";
 export async function getTicketsTypes(req: Request, res: Response) {
@@ -32,7 +31,6 @@ export async function postTicket(req: Request, res: Response) {
   try{
     return res.status(201).send(postedTicket);
   }catch (error) {
-    console.log(error);
     return res.status(400).send({});
   }
 }
